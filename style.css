@@ -1,0 +1,78 @@
+body { background:#333; margin: 0; padding: 0;}
+.card { border:1px solid #fff; }
+i{ color:#fff; }
+.rel { position: relative; }
+.bd-n { border: none; } 
+
+.btn { background:none; border:none; }
+.audio-ct .play-bar-cs { margin:10px; }
+.audio-ct .play-bar-cs input[type="range"] { width:100%; }
+.audio-ct .play-bar-cs .time { display: flex; }
+.audio-ct .play-bar-cs .time > * { flex-basis: 50%; color:#fff; }
+.audio-ct .play-bar-cs .time > .end { text-align: right; }
+.audio-ct .play-bar-cs progress.bar {
+    height: 10px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.audio-ct .play-option { display: flex; }
+.audio-ct .speed-cs {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: flex;
+    height: 100%;
+    font-size: 14px;
+    text-align: center;
+    flex-basis: 22%;
+}
+.audio-ct .speed-cs > button {
+    padding: 0 5px;
+    flex-basis: 22%;
+    cursor: pointer;
+    background:#fff;
+    border: none;
+}
+.audio-ct .speed-cs > button:first-child {
+    border-right: 1px solid #ddd;
+}
+.audio-ct .speed-cs > button:last-child {
+    border-left: 1px solid #ddd;
+}
+.audio-ct .speed-cs > input {
+    border: none;
+    height: 30px;
+    flex-basis: 56%;
+    text-align: center;
+}
+.audio-ct .volume-cs {
+    flex-basis: 25%;
+    display: flex;
+    margin-left:10px;
+    align-items: center;
+}
+.audio-ct .volume-cs input[type="range"] {
+    height:30px;
+    margin:0 5px;
+}
+.audio-ct .volume-cs .icon { cursor: pointer; width:25px; }
+.audio-ct .volume-cs .icon .fa-volume-mute { display: none; }
+.audio-ct .volume-cs .icon .fa-volume-up { display: block; }
+.audio-ct .volume-cs .icon.mute .fa-volume-up { display: none;  }
+.audio-ct .volume-cs .icon.mute .fa-volume-mute { display: block; }
+.audio-ct .volume-cs .icon i { font-size:20px; }
+.audio-ct .ctl-play {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.audio-ct .ctl-play i { font-size:22px; }
+.audio-ct .ctl-play .play-stop { cursor: pointer; margin:0 15px;}
+.audio-ct .ctl-play .play-stop .fa-play { display: block; }   
+.audio-ct .ctl-play .play-stop .fa-pause { display: none; }   
+.audio-ct .ctl-play .play-stop.on .fa-play { display: none; }
+.audio-ct .ctl-play .play-stop.on .fa-pause { display: block; }

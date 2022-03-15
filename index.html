@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    test
+    <div class="audio-ct">
+        <div class="card rel">
+            <div class="play-bar-cs">
+                <progress id="playProgress" class="bar"></progress>
+                <audio id="audioPlayer" src="Justin Bieber - Stay.mp3"></audio>
+                <div class="time">
+                    <div id="playingTime" class="begin">00:00</div>
+                    <div id="audioTime" class="end">00:00</div>
+                </div>
+            </div>
+            <div class="play-option">
+                <div class="volume-cs">
+                    <div class="icon">
+                        <i class="fas fa-volume-up" onclick="muteVolumeOff(this)"></i>
+                        <i class="fas fa-volume-mute" onclick="muteVolumeOn(this)"></i>
+                    </div>
+                    <input type="range" id="volumeBar" min="0" max="10" step="1" value="10" tabindex="2">
+                </div>
+                <div class="ctl-play">
+                    <button type="button" class="btn" onclick="timeJump(-60)" tabindex="6">
+                        <i class="fas fa-angle-double-left"></i>
+                    </button>
+                    <button type="button" class="btn" onclick="timeJump(-30)" tabindex="7">
+                        <i class="fas fa-angle-left"></i>
+                    </button>
+                    <div class="play-stop" tabindex="1" onkeydown="keyEventPlay(this,'play')">
+                        <i class="fas fa-play" onclick="audioPlay(this)"></i>
+                        <i class="fas fa-pause" onclick="audioPause(this)"></i>
+                    </div>
+                    <button type="button" class="btn" onclick="timeJump(30)" tabindex="8">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                    <button type="button" class="btn" onclick="timeJump(60)" tabindex="9">
+                        <i class="fas fa-angle-double-right"></i>
+                    </button>
+                </div>
+                <div class="speed-cs">
+                    <button onclick="playSpeed('minus')" tabindex="3">-</button>
+                    <input type="number" class="spd_txt" size="3" tabindex="4" value="1.0" step="0.1" min="0.1" max="4.0"
+                        onchange="playSpeed('key')">
+                    <button onclick="playSpeed('plus')" tabindex="5">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="audio.js"></script>
 </html>
