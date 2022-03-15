@@ -6,7 +6,6 @@ i{ color:#fff; }
 
 .btn { background:none; border:none; }
 .audio-ct .play-bar-cs { margin:10px; }
-.audio-ct .play-bar-cs input[type="range"] { width:100%; }
 .audio-ct .play-bar-cs .time { display: flex; }
 .audio-ct .play-bar-cs .time > * { flex-basis: 50%; color:#fff; }
 .audio-ct .play-bar-cs .time > .end { text-align: right; }
@@ -21,7 +20,7 @@ i{ color:#fff; }
 }
 .audio-ct .play-option { display: flex; }
 .audio-ct .speed-cs {
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 3px;
     display: flex;
     height: 100%;
@@ -36,12 +35,8 @@ i{ color:#fff; }
     background:#fff;
     border: none;
 }
-.audio-ct .speed-cs > button:first-child {
-    border-right: 1px solid #ddd;
-}
-.audio-ct .speed-cs > button:last-child {
-    border-left: 1px solid #ddd;
-}
+.audio-ct .speed-cs > button:first-child { border-right: 1px solid #ddd; }
+.audio-ct .speed-cs > button:last-child { border-left: 1px solid #ddd; }
 .audio-ct .speed-cs > input {
     border: none;
     height: 30px;
@@ -54,10 +49,7 @@ i{ color:#fff; }
     margin-left:10px;
     align-items: center;
 }
-.audio-ct .volume-cs input[type="range"] {
-    height:30px;
-    margin:0 5px;
-}
+.audio-ct .volume-cs input[type="range"] { height:30px; margin:0 5px; }
 .audio-ct .volume-cs .icon { cursor: pointer; width:25px; }
 .audio-ct .volume-cs .icon .fa-volume-mute { display: none; }
 .audio-ct .volume-cs .icon .fa-volume-up { display: block; }
